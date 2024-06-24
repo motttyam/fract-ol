@@ -25,7 +25,7 @@ SRCS += func_zoom.c
 
 OBJS = $(SRCS:.c=.o)
 
-all: $(NAME) clean
+all: $(NAME)
 
 $(NAME): $(OBJS) $(MINILIBX)
 	$(CC) $(OBJS) $(LDFLAGS) $(LIBS) -o $(NAME)

@@ -6,7 +6,7 @@
 /*   By: ktsukamo <ktsukamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 17:48:19 by ktsukamo          #+#    #+#             */
-/*   Updated: 2024/06/23 15:34:40 by ktsukamo         ###   ########.fr       */
+/*   Updated: 2024/06/24 20:25:30 by ktsukamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	fractol_init(t_data *vars)
 	vars->mlx = NULL;
 	vars->win = NULL;
 	vars->img_ptr = NULL;
+	vars->color = 5;
 	vars->addr = NULL;
 	vars->type = 0;
 	vars->c.re = 0.0;

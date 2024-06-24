@@ -6,7 +6,7 @@
 /*   By: ktsukamo <ktsukamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 15:57:05 by ktsukamo          #+#    #+#             */
-/*   Updated: 2024/06/23 15:57:26 by ktsukamo         ###   ########.fr       */
+/*   Updated: 2024/06/24 21:11:30 by ktsukamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <limits.h>
 # include <math.h>
 # include <mlx.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -62,7 +61,8 @@ enum
 	ON_EXPOSE = 12,
 	ON_DESTROY = 17,
 	JULIA = -1,
-	MANDELBROT = -2
+	MANDELBROT = -2,
+	BURNINGSHIP = -3
 };
 
 int				loop_hook(t_data *data);
@@ -83,11 +83,12 @@ int				ft_close(t_data *vars);
 // rendor.c
 void			rendor_fractol(t_data *vars);
 void			rendor_mandelbort(t_data *vars);
-int				mandelbrot(t_complex c, int maxiter);
-
-// fractol.c
 void			rendor_julia(t_data *vars);
+void			rendor_burningship(t_data *vars);
+// fractol.c
+int				mandelbrot(t_complex c, int maxiter);
 int				julia(t_complex z, t_complex c, int maxiter);
+int				burningship(t_complex c, int maxiter);
 
 ///////////////////////// funcs /////////////////////////
 // func_utlis.c
@@ -103,6 +104,7 @@ double			ft_atof(const char *str);
 t_complex		comp_sum(t_complex x, t_complex y);
 t_complex		comp_mul(t_complex x, t_complex y);
 double			comp_abs(t_complex z);
+t_complex		burning_comp_mul(t_complex x, t_complex y);
 
 // func_color.c
 void			put_color_up_to_count(int count, t_data *vars, int i, int j);
